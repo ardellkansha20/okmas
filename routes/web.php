@@ -174,14 +174,14 @@ Route::middleware(['auth', 'admin'])->group(function () {
         Route::delete('/{id}', [KlasterController::class, 'destroy'])->name('klaster.destroy');
     });
     
-    // Resep Admin
-    Route::prefix('resep')->group(function () {
-        Route::get('/', [ResepObatController::class, 'index'])->name('resep.index');
-        Route::get('/create', [ResepObatController::class, 'create'])->name('resep.create');
-        Route::post('/store', [ResepObatController::class, 'store'])->name('resep.store');
-        Route::get('/{id}', [ResepObatController::class, 'show'])->name('resep.show');
-        Route::delete('/{id}', [ResepObatController::class, 'destroy'])->name('resep.destroy');
-    });
+    // // Resep Admin
+    // Route::prefix('resep')->group(function () {
+    //     Route::get('/', [ResepObatController::class, 'index'])->name('resep.index');
+    //     Route::get('/create', [ResepObatController::class, 'create'])->name('resep.create');
+    //     Route::post('/store', [ResepObatController::class, 'store'])->name('resep.store');
+    //     Route::get('/{id}', [ResepObatController::class, 'show'])->name('resep.show');
+    //     Route::delete('/{id}', [ResepObatController::class, 'destroy'])->name('resep.destroy');
+    // }); 
     
     // Periksa Laporan
     Route::get('/periksa/{id}/laporan', [PeriksaController::class, 'formLaporan'])->name('periksa.formLaporan');
